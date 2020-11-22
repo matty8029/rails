@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @validation_test.userName %>
+</p>
+
+<p>
+  <strong>Postnum:</strong>
+  <%= @validation_test.postNum %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @validation_test.age %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @validation_test.url %>
+</p>
+
+<p>
+  <strong>Mailaddress:</strong>
+  <%= @validation_test.mailaddress %>
+</p>
+
+<%= link_to 'Edit', edit_validation_test_path(@validation_test) %> |
+<%= link_to 'Back', validation_tests_path %>

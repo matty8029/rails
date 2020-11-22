@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Youtube Urls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @youtube_urls.each do |youtube_url| %>
+      <tr>
+        <td><%= youtube_url.name %></td>
+        <td><%= youtube_url.url %></td>
+        <td><%= link_to 'Show', youtube_url %></td>
+        <td><%= link_to 'Edit', edit_youtube_url_path(youtube_url) %></td>
+        <td><%= link_to 'Destroy', youtube_url, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Youtube Url', new_youtube_url_path %>

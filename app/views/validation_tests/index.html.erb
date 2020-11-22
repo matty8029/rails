@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Validation Tests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Postnum</th>
+      <th>Age</th>
+      <th>Url</th>
+      <th>Mailaddress</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @validation_tests.each do |validation_test| %>
+      <tr>
+        <td><%= validation_test.userName %></td>
+        <td><%= validation_test.postNum %></td>
+        <td><%= validation_test.age %></td>
+        <td><%= validation_test.url %></td>
+        <td><%= validation_test.mailaddress %></td>
+        <td><%= link_to 'Show', validation_test %></td>
+        <td><%= link_to 'Edit', edit_validation_test_path(validation_test) %></td>
+        <td><%= link_to 'Destroy', validation_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Validation Test', new_validation_test_path %>

@@ -1,0 +1,9 @@
+ja:
+ actovercprd:
+  models:
+   user:ユーザ
+  attributes:
+   user:
+    name:名前
+    address:住所
+    age:年齢

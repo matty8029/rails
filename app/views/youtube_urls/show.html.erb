@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @youtube_url.name %>
+</p>
+
+<p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @youtube_url.url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+s
+<%= link_to '編集', edit_youtube_url_path(@youtube_url) %> |
+<%= link_to '戻る', youtube_urls_path %>
+l
